@@ -5,7 +5,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('groups.index');
 });
 
 Route::get('/groups', [GroupController::class, 'index'])->name('groups.index');
